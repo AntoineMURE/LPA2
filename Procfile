@@ -1,1 +1,2 @@
-web: bin/rails db:migrate && bin/rails server -p $PORT -e $RAILS_ENV
+release: bundle exec rails db:migrate
+web: bundle exec rails serveur -p $PORT -e $RAILS_ENV

@@ -1,6 +1,6 @@
 class Burger < ApplicationRecord
-    def nutriments(code)
-        @product = Openfoodfacts::Product.get(code, locale: 'fr')
+    def nutriments
+        @product = Openfoodfacts::Product.get(self.code, locale: 'fr')
         if @product == nil
             @json = {"No Data"=> "No code"}
           else

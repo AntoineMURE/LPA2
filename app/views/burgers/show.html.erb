@@ -30,7 +30,7 @@
     <td>Nutriment</td>
     <td>Valeur</td>
   </tr>
-  <% @burger.nutriments(@burger.code).each do |nutri| %>
+  <% @burger.nutriments.each do |nutri| %>
     <tr>
       <td><%= nutri[0] %></td>
       <td><%= nutri[1] %></td>

@@ -1,7 +1,11 @@
 class Burger < ApplicationRecord
     def nutriments(code)
         @product = Openfoodfacts::Product.get(code, locale: 'fr')
-        @json = @product.nutriments.to_hash
+        if @product == nil
+            @json = [["No Data"], [""]]
+          else
+            @json = @product.nutriments.to_hash
+          end
         return @json
     end
 end
